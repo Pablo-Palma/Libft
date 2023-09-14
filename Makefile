@@ -7,6 +7,8 @@ SRC	=	ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 		ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c
 OBJ = $(SRC:.c=.o)
+BONUS_SRC =	ft_lstnew.c ft_lstadd_front.c
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
 FLAGS =	-Wall -Werror -Wextra
 
 all: $(NAME)
@@ -14,11 +16,16 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 	@echo "Libft compiled succesfully!"
+
+bonus: $(OBJ) $(BONUS_OBJ)
+	@ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+	@echo "Libft bonus compiled succesfully!"
+
 %.o: %.c libft.h
 	@gcc $(FLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJ)
+	@rm -f $(OBJ) $(BONUS_OBJ)
 	@echo "Objet files removed!"
 
 fclean: clean
