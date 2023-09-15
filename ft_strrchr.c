@@ -6,7 +6,7 @@
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 18:38:33 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/09/08 13:35:52 by pabpalma         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:33:04 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 			last_ocurrence = (char *)s;
 		s++;
 	}
-	if (c == '\0')
+	if (char_to_find == '\0')
 		return ((char *)s);
 	return (last_ocurrence);
 }
