@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/31 09:07:37 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/09/16 12:51:38 by pabpalma         ###   ########.fr       */
+/*   Created: 2023/09/17 00:11:36 by pabpalma          #+#    #+#             */
+/*   Updated: 2023/09/17 00:11:41 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	char_to_find;
+	t_list	*new_list;
+	t_list	*aux;
 
-	char_to_find = (unsigned char)c;
-	while (*s)
+	new_list = NULL;
+	while (lst)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		aux = ft_lstnew(f(lst->content));
+		if (!aux)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_list, aux);
+		lst = lst->next;
 	}
-	if (char_to_find == 0)
-		return ((char *)s);
-	return (NULL);
+	return (new_list);
 }
-
-/*int	main(void)
-{
-	char test[] = "Pablo Palma";
-
-	printf("%s\n", ft_strchr(test, '\0'));
-	return (0);
-}*/
