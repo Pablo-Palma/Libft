@@ -6,18 +6,18 @@
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 14:09:28 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/09/18 09:55:34 by pabpalma         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:27:03 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_sep(char c, char const charset)
+static int	is_sep(char c, char const charset)
 {
 	return (c == charset);
 }
 
-int	count_words(char const *str, char const charset)
+static int	count_words(char const *str, char const charset)
 {
 	int	words;
 
@@ -36,7 +36,7 @@ int	count_words(char const *str, char const charset)
 	return (words);
 }
 
-char	*ft_strdupp(char const *src, char const *end)
+static char	*ft_strdupp(char const *src, char const *end)
 {
 	char	*dest;
 	int		i;
