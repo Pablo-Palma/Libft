@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/10 18:38:33 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/09/17 00:24:37 by pabpalma         ###   ########.fr       */
+/*   Created: 2023/09/19 09:32:31 by pabpalma          #+#    #+#             */
+/*   Updated: 2023/09/19 09:35:41 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -17,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	char_to_find;
 
 	last_ocurrence = NULL;
-	char_to_find = (unsigned char)c;
+	char_to_find = (unsigned char) c;
 	while (*s)
 	{
 		if (*s == char_to_find)

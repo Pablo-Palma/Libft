@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/05 17:31:11 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/09/06 23:02:19 by pabpalma         ###   ########.fr       */
+/*   Created: 2023/09/18 13:09:19 by pabpalma          #+#    #+#             */
+/*   Updated: 2023/09/18 13:20:13 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*bytes_dest;
 	unsigned char	*bytes_src;

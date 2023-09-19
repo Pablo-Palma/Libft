@@ -6,7 +6,7 @@
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 14:09:28 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/09/06 14:25:04 by pabpalma         ###   ########.fr       */
+/*   Updated: 2023/09/18 09:55:34 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,13 @@ char	*ft_strdupp(char const *src, char const *end)
 {
 	char	*dest;
 	int		i;
+	int		len;
 
 	i = 0;
-	dest = (char *)malloc(end - src + 1);
+	len = 0;
+	while (src + len != end)
+		len++;
+	dest = (char *)malloc(len + 1);
 	if (!dest)
 		return (NULL);
 	while (src + i < end)
