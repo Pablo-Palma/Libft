@@ -1,30 +1,64 @@
-Libft 📘
-Libft es tu biblioteca C personalizada. Una implementación desde cero de funciones esenciales que cada programador necesita.
+Entiendo, te proporcionaré el código fuente en formato Markdown para que puedas copiarlo y pegarlo directamente en tu archivo `README.md`.
 
-🚀 Inicio Rápido
-Clona este repositorio.
-En tu terminal, usa make all para compilar y obtener libft.a.
-¡Listo! Ahora puedes vincular libft.a en tus proyectos.
-🎨 Estructura
-plaintext
-Copy code
-.
-├── Makefile
-├── libft.h
-└── src
-    ├── ft_atoi.c
-    ├── ft_strjoin.c
-    ├── ft_substr.c
-    ├── ...
-    └── ft_putnbr_fd.c
-🛠️ Utilizar Makefile
-sh
-Copy code
-make all        # Compilar
-make clean      # Eliminar archivos objeto
-make fclean     # Eliminar todo menos el código fuente
-make re         # Recompilar desde cero
-🔍 ¿Qué hay dentro?
-Memoria: Funciones como ft_bzero y ft_memcpy para gestionar la memoria.
-Strings: Manipula cadenas con funciones como ft_strlen y ft_strchr.
-Listas Enlazadas: Herramientas para listas, desde ft_lstnew hasta ft_lstadd_front.
+```markdown
+# libft - Your Modern C Library
+
+![Badge](https://img.shields.io/badge/Lib-FT-blue)
+
+Welcome to **libft**! This project is a comprehensive library that recreates some of the standard C library functions and introduces some additional utility functions. If you're looking for a robust and well-documented C library for your next project, you've come to the right place!
+
+## 📖 Contents
+
+1. [Features](#features)
+2. [Usage](#usage)
+3. [Requirements & Installation](#requirements--installation)
+4. [Contact & Support](#contact--support)
+
+## 🚀 Features
+
+- **Core Utilities**: Refined versions of essential C functions.
+- **Memory Functions**: Efficient and reliable tools for memory allocation and manipulation.
+- **String Manipulation**: Everything you need to handle and manipulate strings.
+- **List Management**: A set of functions for managing chained lists.
+
+## 🔧 Usage
+
+### Compilation:
+
+Use the Makefile to compile:
+```bash
+make all
+```
+
+### Include:
+
+Include the `libft.h` header in your C project:
+```c
+#include "libft.h"
+```
+
+## 📦 Requirements & Installation
+
+1. GCC or another C compiler
+2. `make` utility
+3. Git (optional)
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/libft.git
+
+# Navigate to the directory
+cd libft
+
+# Compile the library
+make all
+```
+
+## 📞 Contact & Support
+
+If you have any questions or suggestions, feel free to reach out! Also, pull requests are always welcome.
+
+- **GitHub**: [Pablo-Palma](https://github.com/Pablo-Palma)
+- **Email**: pablopalmappr@gmail.com
+
+Happy coding! 👩‍💻👨‍💻
