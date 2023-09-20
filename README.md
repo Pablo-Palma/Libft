@@ -1,6 +1,4 @@
-Entiendo, te proporcionaré el código fuente en formato Markdown para que puedas copiarlo y pegarlo directamente en tu archivo `README.md`.
 
-```markdown
 # libft - Your Modern C Library
 
 ![Badge](https://img.shields.io/badge/Lib-FT-blue)
