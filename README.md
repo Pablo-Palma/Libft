@@ -7,10 +7,10 @@ Welcome to **libft**! This project is a comprehensive library that recreates som
 
 ## 📖 Contents
 
-1. [Features](#features)
-2. [Usage](#usage)
-3. [Requirements & Installation](#requirements--installation)
-4. [Contact & Support](#contact--support)
+1. [Features](#-features)
+2. [Usage](#-usage)
+3. [Requirements & Installation](#-requirements--installation)
+4. [Contact & Support](#-contact--support)
 
 ## 🚀 Features
 
@@ -27,6 +27,12 @@ Use the Makefile to compile:
 ```bash
 make all
 ```
+
+Other available Makefile commands:
+
+- `make clean`: Remove object files.
+- `make fclean`: Remove object files and the `libft.a` library.
+- `make re`: Re-compile the library.
 
 ### Include:
 
