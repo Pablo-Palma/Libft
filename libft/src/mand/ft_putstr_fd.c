@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 20:32:45 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/09/12 20:49:02 by pabpalma         ###   ########.fr       */
+/*   Created: 2023/09/12 14:06:46 by pabpalma          #+#    #+#             */
+/*   Updated: 2023/09/23 17:25:07 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <limits.h>
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
-	char	c;
+	int	length;
+	int	written;
 
-	if (n == INT_MIN)
-	{
-		write (fd, "-2147483648", 11);
-		return ;
-	}
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = -n;
-	}
-	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	c = n % 10 + '0';
-	ft_putchar_fd(c, fd);
+	if (!s)
+		s = "(null)";
+	length = ft_strlen(s);
+	written = write(fd, s, length);
+	if (written != length)
+		return (-1);
+	return (written);
 }
 /*
 int	main(void)
 {
-	int n = INT_MIN;
-	int fd = 1;
+	printf("%d\n", ft_putstr_fd("ABC\n", 1));
+	printf("%d\n", ft_putstr_fd(NULL, 1));
 
-	ft_putnbr_fd(n, fd);
+//	ft_putstr_fd("cba", 2);
 	return (0);
 }*/

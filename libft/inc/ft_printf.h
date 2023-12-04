@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pabpalma <pabpalma>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:44:11 by pabpalma          #+#    #+#             */
-/*   Updated: 2023/09/12 13:51:13 by pabpalma         ###   ########.fr       */
+/*   Created: 2023/09/21 15:59:24 by pabpalma          #+#    #+#             */
+/*   Updated: 2023/10/24 18:14:48 by pabpalma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
-{
-	write (fd, &c, 1);
-}
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-/*int	main(void)
-{
-	ft_putchar_fd('A', 1);
-	ft_putchar_fd('B', 2);
-	return (0);
-}*/
+# include <stdio.h>
+# include <stdlib.h>
+# include <stddef.h>
+# include <stdarg.h>
+# include <string.h>
+# include <unistd.h>
+# include <limits.h>
+# include "libft.h"
+
+int	ft_printf(char const *str, ...);
+
+#endif
